@@ -32,6 +32,12 @@ const router = createRouter({
       name: 'addons',
       // Using dynamic import for better performance
       component: () => import('../views/AddOnView.vue')
+    },
+    {
+      path: '/finishingup',
+      name: 'finishingup',
+      // Using dynamic import for better performance
+      component: () => import('../views/FinishingUp.vue')
     }
   ]
 })
