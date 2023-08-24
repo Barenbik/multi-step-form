@@ -26,6 +26,12 @@ const router = createRouter({
       name: 'plans',
       // Using dynamic import for better performance
       component: () => import('../views/PlanView.vue')
+    },
+    {
+      path: '/addons',
+      name: 'addons',
+      // Using dynamic import for better performance
+      component: () => import('../views/AddOnView.vue')
     }
   ]
 })
