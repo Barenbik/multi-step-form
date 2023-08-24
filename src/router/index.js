@@ -37,7 +37,13 @@ const router = createRouter({
       path: '/finishingup',
       name: 'finishingup',
       // Using dynamic import for better performance
-      component: () => import('../views/FinishingUp.vue')
+      component: () => import('../views/FinishingUpView.vue')
+    },
+    {
+      path: '/completed',
+      name: 'completed',
+      // Using dynamic import for better performance
+      component: () => import('../views/CompletedView.vue')
     }
   ]
 })
