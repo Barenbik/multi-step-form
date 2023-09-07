@@ -5,6 +5,7 @@
             <div class="p-4 pl-0">
                 <p class="font-semibold text-marine-blue">{{ plan }}</p>
                 <p class="font-normal text-cool-gray text-sm">${{ cost }}/mo</p>
+                <!-- Testing GitHub account -->
             </div>
         </div>
     </div>
