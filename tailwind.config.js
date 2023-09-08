@@ -10,7 +10,8 @@ module.exports = {
         'marine-blue': '#02295a',
         'cool-gray': '#9699ab',
         'light-gray': '#d6d9e6',
-        'alabaster': '#fafbff'
+        'alabaster': '#fafbff',
+        'purplish-blue': '#473dff'
       },
     },
   },

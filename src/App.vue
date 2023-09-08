@@ -8,7 +8,6 @@
           <router-link to="/addons">Add-ons</router-link>
           <router-link to="/finishingup">Finishing Up</router-link>
           <router-link to="/completed">Completed</router-link>
-          <!-- Another test commit -->
         </nav>
       </div>
     </header>

@@ -4,16 +4,18 @@
         <p class="font-normal text-cool-gray pb-6 text-lg leading-6">You have the option of monthly or yearly billing.</p>
         <plan-component icon="icon-arcade" plan="Arcade" cost="9" />
         <plan-component icon="icon-advanced" plan="Advanced" cost="12" />
-        <plan-component icon="icon-pro" plan="Pro" cost="15" />        
-        <!-- TODO: Add monthly / yearly toggle component -->
+        <plan-component icon="icon-pro" plan="Pro" cost="15" />  
+        <toggle-switch />
     </div>
 </template>
 <script>
 import PlanComponent from '../components/PlanComponent.vue'
+import ToggleSwitch from '../components/ToggleSwitch.vue';
 
 export default {
     components: {
-        PlanComponent
+        PlanComponent,
+        ToggleSwitch
     }
 }
 </script>
