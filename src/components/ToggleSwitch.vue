@@ -1,5 +1,5 @@
 <template>
-    <div class="p-4 bg-alabaster rounded-md">
+    <div class="mt-4 p-4 bg-alabaster rounded-md">
         <div class="flex justify-center">
             <span class="text-sm font-medium mr-4 text-cool-gray" :class="{ 'text-marine-blue': !isYearly }">Monthly</span>
             <label class="relative inline-flex items-center cursor-pointer">

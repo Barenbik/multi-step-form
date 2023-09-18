@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <header>
+  <div class="bg-light-blue h-screen">
+    <header class="bg-header-pattern bg-cover h-40">
       <div>
         <nav>
           <router-link to="/personal">Personal</router-link>
@@ -11,7 +11,7 @@
         </nav>
       </div>
     </header>
-    <router-view />
+    <router-view class="mx-4 -my-20"/>
   </div>
 </template>
 

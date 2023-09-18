@@ -11,8 +11,12 @@ module.exports = {
         'cool-gray': '#9699ab',
         'light-gray': '#d6d9e6',
         'alabaster': '#fafbff',
-        'purplish-blue': '#473dff'
+        'purplish-blue': '#473dff',
+        'light-blue': '#bfe2fd'
       },
+      backgroundImage: {
+        'header-pattern': "url('../src/assets/images/bg-sidebar-mobile.svg')",
+      }
     },
   },
   plugins: [],
