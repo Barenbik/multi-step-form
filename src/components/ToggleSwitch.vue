@@ -3,7 +3,7 @@
         <div class="flex justify-center">
             <span class="text-sm font-medium mr-4 text-cool-gray" :class="{ 'text-marine-blue': !isYearly }">Monthly</span>
             <label class="relative inline-flex items-center cursor-pointer">
-                <input type="checkbox" value="" class="sr-only peer" v-model="isYearly">
+                <input type="checkbox" value="" class="sr-only peer" v-model="isYearly" @change="toggleIsYearly">
                 <div class="w-9 h-5 bg-marine-blue
                 peer-focus:outline-none 
                 rounded-full peer 
@@ -28,11 +28,15 @@
     </div>
 </template>
 <script>
-export default {
-    data() {
-        return {
-            isYearly: false
-        }
+import { mapState, mapActions } from 'pinia'
+import { useStore } from '@/stores/store.js'
+
+export default {    
+    computed: {
+        ...mapState(useStore, ['isYearly'])
+    },
+    methods: {
+        ...mapActions(useStore, ["toggleIsYearly"])
     }
 }
 </script>
