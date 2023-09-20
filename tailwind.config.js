@@ -12,7 +12,8 @@ module.exports = {
         'light-gray': '#d6d9e6',
         'alabaster': '#fafbff',
         'purplish-blue': '#473dff',
-        'light-blue': '#bfe2fd'
+        'light-blue': '#bfe2fd',
+        'pastel-blue': '#adbeff'
       },
       backgroundImage: {
         'header-pattern': "url('../src/assets/images/bg-sidebar-mobile.svg')",
