@@ -1,0 +1,43 @@
+<template>
+  <div class="pb-2">
+    <div
+      class="border-solid border border-gray-200 rounded-md flex hover:border-indigo-600 hover:bg-alabaster"
+    >
+    <input type="checkbox" name="addon" id="addon">
+    <div class="p-4 pl-0">
+        <p class="font-semibold text-marine-blue">{{ addon }}</p>
+        <p class="font-normal text-cool-gray text-sm">{{ description }}</p>
+        <p v-if="!isYearly" class="font-normal text-sm text-purplish-blue">${{ monthlyCost }}/mo</p>
+        <p v-else class="font-normal text-sm text-purplish-blue">${{ yearlyCost }}/yr</p>
+      </div>
+</div>
+  </div>
+</template>
+<script>
+import { mapState } from 'pinia'
+import { useStore } from '@/stores/store.js'
+
+export default {
+    props: {
+        addon: {
+            type: String,
+            required: true
+        },
+        description: {
+            type: String,
+            required: true
+        },
+        monthlyCost: {
+            type: String,
+            required: true
+        },
+        yearlyCost: {
+            type: String,
+            required: true
+        }
+    },
+  computed: {
+    ...mapState(useStore, ['isYearly'])
+  }
+}
+</script>
