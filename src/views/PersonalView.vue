@@ -1,5 +1,5 @@
 <template>
-    <div class="p-6 rounded-md bg-white">
+    <div class="p-6 rounded-md bg-white shadow-lg">
         <h1 class="font-semibold text-marine-blue text-2xl pb-2">Personal info</h1>
         <p class="font-normal text-cool-gray pb-6 text-lg leading-6">Please provide your name, email address, and phone number.</p>
         <div class="pb-3">
