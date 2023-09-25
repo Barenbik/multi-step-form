@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-alabaster h-screen">
+  <div class="bg-light-gray h-screen">
     <header class="bg-header-pattern bg-cover h-40">
       <nav class="flex items-center justify-center h-20">
         <div class="m-2 rounded-full border border-solid border-white hover:bg-light-blue">
