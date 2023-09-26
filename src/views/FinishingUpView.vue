@@ -8,25 +8,50 @@
       <div class="flex justify-between px-6 pt-4 pb-2 items-center">
         <div>
           <p class="font-semibold text-marine-blue">Arcade (Monthly)</p>
-          <a class="text-cool-gray  underline hover:cursor-pointer">Change</a>
-        </div>        
-        <p class="font-semibold text-marine-blue">$9/mo</p>
+          <a class="text-cool-gray underline hover:cursor-pointer">Change</a>
+        </div>
+        <p class="font-semibold text-marine-blue">${{ arcadeCost }}/mo</p>
       </div>
-      <hr class="mx-6">
+      <hr class="mx-6" />
       <div class="px-6 pb-4 pt-2">
         <div class="flex justify-between">
           <p class="pb-2 text-cool-gray">Online service</p>
-          <p class="text-marine-blue">+$1/mo</p>
+          <p class="text-marine-blue">+${{ onlineCost }}/{{ chargingPeriod }}</p>
         </div>
         <div class="flex justify-between">
           <p class="text-cool-gray">Larger storage</p>
-          <p class="text-marine-blue">+$2/mo</p>
+          <p class="text-marine-blue">+${{ storageCost }}/{{ chargingPeriod }}</p>
         </div>
       </div>
     </div>
     <div class="flex justify-between px-6 pt-6">
       <p class="text-cool-gray">Total (per month)</p>
-      <p class="text-purplish-blue font-bold">+$12/mo</p>
+      <p class="text-purplish-blue font-bold">+${{ totalCost }}/{{ chargingPeriod }}</p>
     </div>
   </div>
 </template>
+<script>
+import { mapState } from 'pinia'
+import { useStore } from '@/stores/store.js'
+
+export default {
+  computed: {
+    ...mapState(useStore, ['isYearly']),
+    arcadeCost() {
+      return this.isYearly ? 90 : 9
+    },
+    onlineCost() {
+      return this.isYearly ? 10 : 1
+    },
+    storageCost() {
+      return this.isYearly ? 20 : 2
+    },
+    totalCost() {
+      return this.arcadeCost + this.onlineCost + this.storageCost
+    },
+    chargingPeriod() {
+      return this.isYearly ? 'yr' : 'mo'
+    }
+  }
+}
+</script>
