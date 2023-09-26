@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-light-gray h-screen">
+  <div class="flex flex-col bg-light-gray h-screen">
     <header class="bg-header-pattern bg-cover h-40">
       <nav class="flex items-center justify-center h-20">
         <div class="m-2 rounded-full border border-solid border-white hover:bg-light-blue">
@@ -28,9 +28,16 @@
       </nav>
     </header>
     <router-view class="mx-4 -my-20" />
+    <navigation-component />
   </div>
 </template>
 
 <script>
-export default {}
+import NavigationComponent from './components/NavigationComponent.vue';
+
+export default {
+  components: {
+    NavigationComponent
+  }
+}
 </script>
