@@ -27,17 +27,6 @@
         </div>
       </nav>
     </header>
-    <router-view class="mx-4 -my-20" />
-    <navigation-component />
+    <router-view />
   </div>
 </template>
-
-<script>
-import NavigationComponent from './components/NavigationComponent.vue';
-
-export default {
-  components: {
-    NavigationComponent
-  }
-}
-</script>

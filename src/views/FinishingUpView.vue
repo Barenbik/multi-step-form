@@ -1,5 +1,5 @@
 <template>
-  <div class="p-6 rounded-md bg-white shadow-lg">
+  <div class="mx-4 -my-20 p-6 rounded-md bg-white shadow-lg">
     <h1 class="font-semibold text-marine-blue text-2xl pb-2">Finishing up</h1>
     <p class="font-normal text-cool-gray pb-6 text-lg leading-6">
       Double check everything looks OK before confirming.
@@ -29,12 +29,17 @@
       <p class="text-purplish-blue font-bold">+${{ totalCost }}/{{ chargingPeriod }}</p>
     </div>
   </div>
+  <navigation-component />
 </template>
 <script>
 import { mapState } from 'pinia'
 import { useStore } from '@/stores/store.js'
+import NavigationComponent from '../components/NavigationComponent.vue';
 
 export default {
+  components: {
+    NavigationComponent
+  },
   computed: {
     ...mapState(useStore, ['isYearly']),
     arcadeCost() {
