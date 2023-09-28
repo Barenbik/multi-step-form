@@ -29,12 +29,12 @@
       <p class="text-purplish-blue font-bold">+${{ totalCost }}/{{ chargingPeriod }}</p>
     </div>
   </div>
-  <navigation-component />
+  <navigation-component moveTo="/completed" />
 </template>
 <script>
 import { mapState } from 'pinia'
 import { useStore } from '@/stores/store.js'
-import NavigationComponent from '../components/NavigationComponent.vue';
+import NavigationComponent from '../components/NavigationComponent.vue'
 
 export default {
   components: {

@@ -23,11 +23,11 @@
       yearlyCost="20"
     />
   </div>
-  <navigation-component />
+  <navigation-component moveTo="/finishingup" />
 </template>
 <script>
 import AddOnComponent from '../components/AddOnComponent.vue'
-import NavigationComponent from '../components/NavigationComponent.vue';
+import NavigationComponent from '../components/NavigationComponent.vue'
 
 export default {
   components: {

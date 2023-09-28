@@ -11,12 +11,12 @@
       <toggle-switch />
     </div>
   </div>
-  <navigation-component />
+  <navigation-component moveTo="/addons" />
 </template>
 <script>
 import PlanComponent from '../components/PlanComponent.vue'
 import ToggleSwitch from '../components/ToggleSwitch.vue'
-import NavigationComponent from '../components/NavigationComponent.vue';
+import NavigationComponent from '../components/NavigationComponent.vue'
 
 export default {
   components: {
