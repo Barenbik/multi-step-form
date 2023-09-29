@@ -23,7 +23,7 @@
       yearlyCost="20"
     />
   </div>
-  <navigation-component moveTo="/finishingup" />
+  <navigation-component backTo="/plans" moveTo="/finishingup" />
 </template>
 <script>
 import AddOnComponent from '../components/AddOnComponent.vue'

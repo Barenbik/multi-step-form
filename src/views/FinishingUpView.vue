@@ -29,7 +29,7 @@
       <p class="text-purplish-blue font-bold">+${{ totalCost }}/{{ chargingPeriod }}</p>
     </div>
   </div>
-  <navigation-component moveTo="/completed" />
+  <navigation-component backTo="/addons" moveTo="/completed" />
 </template>
 <script>
 import { mapState } from 'pinia'

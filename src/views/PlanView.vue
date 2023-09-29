@@ -11,7 +11,7 @@
       <toggle-switch />
     </div>
   </div>
-  <navigation-component moveTo="/addons" />
+  <navigation-component backTo="/personal" moveTo="/addons" />
 </template>
 <script>
 import PlanComponent from '../components/PlanComponent.vue'
