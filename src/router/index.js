@@ -2,9 +2,14 @@ import { createRouter, createWebHistory } from 'vue-router'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
-  routes: [
+  routes: [   
     {
-      path: '/personal',
+      path: '/',      
+      name: 'home',
+      redirect: { name: 'personal' }      
+    }, 
+    {
+      path: '/personal',      
       name: 'personal',
       // Using dynamic import for better performance
       component: () => import('../views/PersonalView.vue')
