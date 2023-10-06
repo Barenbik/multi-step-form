@@ -16,7 +16,8 @@ module.exports = {
         'pastel-blue': '#adbeff'
       },
       backgroundImage: {
-        'header-pattern': "url('../src/assets/images/bg-sidebar-mobile.svg')",
+        'mobile-header-pattern': "url('../src/assets/images/bg-sidebar-mobile.svg')",
+        'desktop-header-pattern': "url('../src/assets/images/bg-sidebar-desktop.svg')",
       }
     },
   },
