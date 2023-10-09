@@ -1,5 +1,5 @@
 <template>
-  <div class="mx-4 -my-20 p-6 rounded-md bg-white shadow-lg">
+  <div class="mx-4 -my-20 p-6 rounded-md bg-white shadow-lg md:my-4 md:shadow-none">
     <h1 class="font-semibold text-marine-blue text-2xl pb-2">Pick add-ons</h1>
     <p class="font-normal text-cool-gray pb-6 text-lg leading-6">
       Add-ons help enhance your gaming experience.

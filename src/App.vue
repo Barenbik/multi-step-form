@@ -1,8 +1,10 @@
 <template>
-  <div class="flex flex-col bg-light-gray h-screen">
-    <stage-component class="xl:hidden" />
-    <router-view />
-  </div>
+  <div class="bg-light-gray md:flex md:bg-white">
+    <div class="flex flex-col h-screen md:max-w-5xl">
+      <stage-component class="md:hidden" />
+      <router-view />
+    </div>
+</div>
 </template>
 <script>
 import StageComponent from './components/StageComponent.vue'
