@@ -1,7 +1,7 @@
 <template>
   <div class="mt-auto bg-white">
     <div
-      class="flex items-center mx-4 py-5"
+      class="flex items-center mx-4 py-5 md:mx-0 md:py-0 md:pt-20"
       :class="{ 'justify-between': backTo, 'justify-end': !backTo }"
     >
       <router-link v-if="backTo" :to="backTo">
