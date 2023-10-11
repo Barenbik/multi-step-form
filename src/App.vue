@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-light-gray md:flex md:bg-white">
+  <div class="bg-light-gray md:flex md:justify-center">
     <div class="flex flex-col h-screen md:max-w-5xl">
       <stage-component class="md:hidden" />
       <router-view />

@@ -1,5 +1,5 @@
 <template>
-  <div class="mx-4 -my-20 p-6 rounded-md bg-white shadow-lg md:my-4 md:p-0 md:shadow-none md:flex md:flex-row">
+  <div class="mx-4 -my-20 p-6 rounded-md bg-white shadow-lg md:my-4 md:p-4 md:shadow-none md:flex md:flex-row">
     <stage-component class="rounded-md hidden md:block" />
     <div class="md:px-20 md:pt-10">
       <h1 class="font-semibold text-marine-blue text-3xl pb-2">Personal info</h1>
