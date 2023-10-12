@@ -1,10 +1,10 @@
 <template>
-  <div class="pb-2">
+  <div class="pb-2 md:p-2">
     <div
-      class="border-solid border border-gray-200 rounded-md flex hover:border-indigo-600 hover:bg-alabaster"
-    >
-      <img class="p-3" :src="`../src/assets/images/${icon}.svg`" :alt="`${icon}`" />
-      <div class="p-4 pl-0">
+      class="border-solid border border-gray-200 rounded-md flex hover:border-indigo-600 hover:bg-alabaster md:flex-col md:w-36 md:h-40"
+    >   
+      <img class="p-3" width="60" height="60" :src="`../src/assets/images/${icon}.svg`" :alt="`${icon}`" />
+      <div class="p-4 pl-0 md:pl-4 md:mt-auto">
         <p class="font-semibold text-marine-blue">{{ plan }}</p>
         <p v-if="!isYearly" class="font-normal text-cool-gray text-sm">${{ monthlyCost }}/mo</p>
         <p v-if="isYearly" class="font-normal text-cool-gray text-sm">${{ yearlyCost }}/yr</p>

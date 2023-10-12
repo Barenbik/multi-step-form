@@ -6,9 +6,11 @@
         <p class="font-normal text-cool-gray pb-8 leading-6">
           You have the option of monthly or yearly billing.
         </p>
-        <plan-component icon="icon-arcade" plan="Arcade" monthlyCost="9" yearlyCost="90" />
-        <plan-component icon="icon-advanced" plan="Advanced" monthlyCost="12" yearlyCost="120" />
-        <plan-component icon="icon-pro" plan="Pro" monthlyCost="15" yearlyCost="150" />
+        <div class="md:flex md:flex-row">
+          <plan-component icon="icon-arcade" plan="Arcade" monthlyCost="9" yearlyCost="90" />
+          <plan-component icon="icon-advanced" plan="Advanced" monthlyCost="12" yearlyCost="120" />
+          <plan-component icon="icon-pro" plan="Pro" monthlyCost="15" yearlyCost="150" />
+        </div>
         <toggle-switch />
         <navigation-component backTo="/personal" moveTo="/addons" class="hidden md:block" />
       </div>
