@@ -1,7 +1,7 @@
 <template>
   <div class="pb-2 md:p-2">
     <div
-      class="border-solid border border-gray-200 rounded-md flex hover:border-indigo-600 hover:bg-alabaster md:flex-col md:w-36 md:h-40"
+      class="border-solid border border-gray-200 rounded-md flex hover:border-indigo-600 hover:bg-alabaster md:flex-col md:w-32 md:h-40"
     >   
       <img class="p-3" width="60" height="60" :src="`../src/assets/images/${icon}.svg`" :alt="`${icon}`" />
       <div class="p-4 pl-0 md:pl-4 md:mt-auto">
