@@ -1,16 +1,16 @@
 <template>
-  <div class="pb-2">
+  <div class="pb-2 md:pb-4">
     <div
       class="border-solid border border-gray-200 rounded-md flex hover:border-indigo-600 hover:bg-alabaster"
     >
-      <div class="p-3 flex items-center w-full justify-stretch">
+      <div class="p-3 flex items-center w-full justify-stretch md:p-5">
         <input
           class="h-5 w-5 text-purplish-blue rounded focus:outline-none focus:ring-transparent"
           type="checkbox"
           name="addon"
           id="addon"
         />
-        <div class="pl-4 flex-grow">
+        <div class="pl-4 flex-grow md:pl-6">
           <p class="font-semibold text-marine-blue">{{ addon }}</p>
           <p class="font-normal text-cool-gray text-sm">{{ description }}</p>
         </div>
