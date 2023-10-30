@@ -18,6 +18,9 @@ module.exports = {
       backgroundImage: {
         'mobile-header-pattern': "url('../src/assets/images/bg-sidebar-mobile.svg')",
         'desktop-header-pattern': "url('../src/assets/images/bg-sidebar-desktop.svg')",
+      },
+      minHeight: {
+        'custom': '38rem'
       }
     },
   },

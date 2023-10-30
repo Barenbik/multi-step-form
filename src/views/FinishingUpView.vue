@@ -1,6 +1,6 @@
 <template>
   <div
-    class="mx-4 -my-20 p-6 rounded-md bg-white shadow-lg md:my-4 md:shadow-none md:flex md:flex-row"
+    class="mx-4 -my-20 p-6 rounded-md bg-white shadow-lg md:my-4 md:shadow-none md:flex md:flex-row md:h-3/4 md:min-h-custom"
   >
     <stage-component class="rounded-md hidden md:block" />
     <div class="md:px-20 md:pt-10">
