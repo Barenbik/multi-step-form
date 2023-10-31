@@ -1,10 +1,10 @@
 <template>
   <div class="bg-light-gray md:flex md:justify-center">
-    <div class="flex flex-col h-screen md:w-screen md:max-w-4xl">
+    <div class="flex flex-col h-screen md:w-screen md:max-w-5xl">
       <stage-component class="md:hidden" />
       <router-view />
     </div>
-</div>
+  </div>
 </template>
 <script>
 import StageComponent from './components/StageComponent.vue'
