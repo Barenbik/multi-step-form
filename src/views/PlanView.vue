@@ -9,7 +9,7 @@
         <p class="font-normal text-cool-gray pb-8 leading-6">
           You have the option of monthly or yearly billing.
         </p>
-        <div class="md:flex md:flex-row">
+        <div class="md:flex md:flex-row md:justify-between">
           <plan-component icon="icon-arcade" plan="Arcade" monthlyCost="9" yearlyCost="90" />
           <plan-component icon="icon-advanced" plan="Advanced" monthlyCost="12" yearlyCost="120" />
           <plan-component icon="icon-pro" plan="Pro" monthlyCost="15" yearlyCost="150" />

@@ -1,5 +1,5 @@
 <template>
-  <div class="pb-2 md:pb-4">
+  <div class="pb-2 md:pb-3">
     <div
       class="border-solid border border-gray-200 rounded-md flex hover:border-indigo-600 hover:bg-alabaster"
     >
