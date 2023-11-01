@@ -21,6 +21,9 @@ module.exports = {
       },
       height: {
         custom: '38rem'
+      },
+      minWidth: {
+        94: '5.875rem'
       }
     }
   },
