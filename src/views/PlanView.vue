@@ -10,9 +10,27 @@
           You have the option of monthly or yearly billing.
         </p>
         <div class="md:flex md:flex-row md:justify-between">
-          <plan-component icon="icon-arcade" plan="Arcade" monthlyCost="9" yearlyCost="90" />
-          <plan-component icon="icon-advanced" plan="Advanced" monthlyCost="12" yearlyCost="120" />
-          <plan-component icon="icon-pro" plan="Pro" monthlyCost="15" yearlyCost="150" />
+          <plan-component
+            icon="icon-arcade"
+            plan="Arcade"
+            monthlyCost="9"
+            yearlyCost="90"
+            :isActive="selectedPlan === 'Arcade'"
+          />
+          <plan-component
+            icon="icon-advanced"
+            plan="Advanced"
+            monthlyCost="12"
+            yearlyCost="120"
+            :isActive="selectedPlan === 'Advanced'"
+          />
+          <plan-component
+            icon="icon-pro"
+            plan="Pro"
+            monthlyCost="15"
+            yearlyCost="150"
+            :isActive="selectedPlan === 'Pro'"
+          />
         </div>
         <toggle-switch />
       </div>
@@ -26,6 +44,8 @@ import PlanComponent from '../components/PlanComponent.vue'
 import ToggleSwitch from '../components/ToggleSwitch.vue'
 import NavigationComponent from '../components/NavigationComponent.vue'
 import StageComponent from '../components/StageComponent.vue'
+import { mapState } from 'pinia'
+import { useStore } from '@/stores/store.js'
 
 export default {
   components: {
@@ -33,6 +53,9 @@ export default {
     ToggleSwitch,
     NavigationComponent,
     StageComponent
+  },
+  computed: {
+    ...mapState(useStore, ['selectedPlan'])
   }
 }
 </script>
