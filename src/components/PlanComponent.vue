@@ -36,11 +36,11 @@ export default {
       required: true
     },
     monthlyCost: {
-      type: String,
+      type: Number,
       required: true
     },
     yearlyCost: {
-      type: String,
+      type: Number,
       required: true
     },
     isActive: {
@@ -49,7 +49,10 @@ export default {
     }
   },
   computed: {
-    ...mapState(useStore, ['isYearly'])
+    ...mapState(useStore, ['isYearly']),
+    cost() {
+      return this.isYearly ? this.yearlyCost : this.monthlyCost
+    }
   },
   methods: {
     ...mapActions(useStore, ['updateSelectedPlan'])

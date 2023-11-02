@@ -13,22 +13,22 @@
           <plan-component
             icon="icon-arcade"
             plan="Arcade"
-            monthlyCost="9"
-            yearlyCost="90"
+            :monthlyCost="9"
+            :yearlyCost="90"
             :isActive="selectedPlan === 'Arcade'"
           />
           <plan-component
             icon="icon-advanced"
             plan="Advanced"
-            monthlyCost="12"
-            yearlyCost="120"
+            :monthlyCost="12"
+            :yearlyCost="120"
             :isActive="selectedPlan === 'Advanced'"
           />
           <plan-component
             icon="icon-pro"
             plan="Pro"
-            monthlyCost="15"
-            yearlyCost="150"
+            :monthlyCost="15"
+            :yearlyCost="150"
             :isActive="selectedPlan === 'Pro'"
           />
         </div>

@@ -12,10 +12,14 @@
         <div class="bg-alabaster rounded-md">
           <div class="flex justify-between px-6 pt-4 pb-2 items-center">
             <div>
-              <p class="font-semibold text-marine-blue">Arcade (Monthly)</p>
+              <p class="font-semibold text-marine-blue">
+                {{ this.selectedPlan }} ({{ this.isYearly ? 'Yearly' : 'Monthly' }})
+              </p>
               <a class="text-cool-gray underline hover:cursor-pointer">Change</a>
             </div>
-            <p class="font-semibold text-marine-blue">${{ arcadeCost }}/mo</p>
+            <p class="font-semibold text-marine-blue">
+              ${{ this.planCost }}/ {{ this.isYearly ? 'yr' : 'mo' }}
+            </p>
           </div>
           <hr class="mx-6" />
           <div class="px-6 pb-4 pt-2">
@@ -51,10 +55,7 @@ export default {
     StageComponent
   },
   computed: {
-    ...mapState(useStore, ['isYearly']),
-    arcadeCost() {
-      return this.isYearly ? 90 : 9
-    },
+    ...mapState(useStore, ['isYearly', 'selectedPlan', 'planCost']),
     onlineCost() {
       return this.isYearly ? 10 : 1
     },
