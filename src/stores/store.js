@@ -5,6 +5,7 @@ export const useStore = defineStore('store', {
     isYearly: false,
     selectedPlan: '',
     planCost: 0,
+    addOnsCost: 0,
     totalCost: 0,
     selectedAddOns: []
   }),
@@ -18,18 +19,17 @@ export const useStore = defineStore('store', {
       this.updateCosts()
     },
     updateSelectedAddOns(addOn) {
-      const index = this.selectedAddOns.indexOf(addOn);
-      
-      if (index !== -1) {        
-        this.selectedAddOns.splice(index, 1);
-      } else {        
-        this.selectedAddOns.push(addOn);
+      const index = this.selectedAddOns.indexOf(addOn)
+
+      if (index !== -1) {
+        this.selectedAddOns.splice(index, 1)
+      } else {
+        this.selectedAddOns.push(addOn)
       }
 
-      this.selectedAddOns = this.selectedAddOns.sort((a, b) => {
-        return b.localeCompare(a);
-      });
-    },    
+      this.selectedAddOns = this.selectedAddOns.sort((a, b) => b.localeCompare(a));
+      this.updateCosts()
+    },
     updateCosts() {
       switch (this.selectedPlan) {
         case 'Arcade':
@@ -45,7 +45,21 @@ export const useStore = defineStore('store', {
           break
       }
 
-      this.totalCost = this.planCost
+      this.addOnsCost = 0
+
+      if (this.selectedAddOns.includes('Online service')) {
+        this.addOnsCost += this.isYearly ? 10 : 1
+      }
+
+      if (this.selectedAddOns.includes('Larger storage')) {
+        this.addOnsCost += this.isYearly ? 20 : 2
+      }
+
+      if (this.selectedAddOns.includes('Customisable profile')) {
+        this.addOnsCost += this.isYearly ? 20 : 2
+      }
+
+      this.totalCost = this.planCost + this.addOnsCost
     }
-  }
+  }, 
 })
