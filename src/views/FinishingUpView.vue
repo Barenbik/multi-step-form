@@ -23,13 +23,9 @@
           </div>
           <hr class="mx-6" />
           <div class="px-6 pb-4 pt-2">
-            <div class="flex justify-between">
-              <p class="pb-2 text-cool-gray">Online service</p>
-              <p class="text-marine-blue">+${{ onlineCost }}/{{ chargingPeriod }}</p>
-            </div>
-            <div class="flex justify-between">
-              <p class="text-cool-gray">Larger storage</p>
-              <p class="text-marine-blue">+${{ storageCost }}/{{ chargingPeriod }}</p>
+            <div class="flex justify-between" v-for="addOn in this.selectedAddOns" :key="addOn.id">
+              <p class="pb-2 text-cool-gray">{{addOn}}</p>
+              <p class="text-marine-blue">+${{ isYearly ? addOnsData[addOn].yearly : addOnsData[addOn].monthly }}/{{ chargingPeriod }}</p>
             </div>
           </div>
         </div>
@@ -55,16 +51,7 @@ export default {
     StageComponent
   },
   computed: {
-    ...mapState(useStore, ['isYearly', 'selectedPlan', 'planCost']),
-    onlineCost() {
-      return this.isYearly ? 10 : 1
-    },
-    storageCost() {
-      return this.isYearly ? 20 : 2
-    },
-    totalCost() {
-      return this.arcadeCost + this.onlineCost + this.storageCost
-    },
+    ...mapState(useStore, ['isYearly', 'selectedPlan', 'planCost', 'totalCost', 'selectedAddOns', 'addOnsData']),   
     chargingPeriod() {
       return this.isYearly ? 'yr' : 'mo'
     }

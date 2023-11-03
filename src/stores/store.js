@@ -7,7 +7,17 @@ export const useStore = defineStore('store', {
     planCost: 0,
     addOnsCost: 0,
     totalCost: 0,
-    selectedAddOns: []
+    selectedAddOns: [],
+    planData: {
+      Arcade: { monthly: 9, yearly: 90 },
+      Advanced: { monthly: 12, yearly: 120 },
+      Pro: { monthly: 15, yearly: 150 },
+    },
+    addOnsData: {
+      'Online service': { monthly: 1, yearly: 10 },
+      'Larger storage': { monthly: 2, yearly: 20 },
+      'Customisable profile': { monthly: 2, yearly: 20 },
+    },
   }),
   actions: {
     toggleIsYearly() {
