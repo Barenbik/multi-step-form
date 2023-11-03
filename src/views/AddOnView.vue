@@ -12,22 +12,22 @@
         <add-on-component
           addon="Online service"
           description="Access to multiplayer games"
-          monthlyCost="1"
-          yearlyCost="10"
+          :monthlyCost="addOnsData['Online service'].monthly"
+          :yearlyCost="addOnsData['Online service'].yearly"
           :isSelected="this.selectedAddOns.includes('Online service')"
         />
         <add-on-component
           addon="Larger storage"
           description="Extra 1TB of cloud save"
-          monthlyCost="2"
-          yearlyCost="20"
+          :monthlyCost="addOnsData['Larger storage'].monthly"
+          :yearlyCost="addOnsData['Larger storage'].yearly"
           :isSelected="this.selectedAddOns.includes('Larger storage')"
         />
         <add-on-component
           addon="Customisable profile"
           description="Custom theme on your profile"
-          monthlyCost="2"
-          yearlyCost="20"
+          :monthlyCost="addOnsData['Customisable profile'].monthly"
+          :yearlyCost="addOnsData['Customisable profile'].yearly"
           :isSelected="this.selectedAddOns.includes('Customisable profile')"
         />
       </div>
@@ -50,7 +50,7 @@ export default {
     StageComponent
   },
   computed: {
-    ...mapState(useStore, ['selectedAddOns'])
+    ...mapState(useStore, ['selectedAddOns', 'addOnsData'])
   }
 }
 </script>

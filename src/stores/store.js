@@ -43,13 +43,13 @@ export const useStore = defineStore('store', {
     updateCosts() {
       switch (this.selectedPlan) {
         case 'Arcade':
-          this.planCost = this.isYearly ? 90 : 9
+          this.planCost = this.isYearly ? this.planData.Arcade.yearly : this.planData.Arcade.monthly
           break
         case 'Advanced':
-          this.planCost = this.isYearly ? 120 : 12
+          this.planCost = this.isYearly ? this.planData.Advanced.yearly : this.planData.Advanced.monthly
           break
         case 'Pro':
-          this.planCost = this.isYearly ? 150 : 15
+          this.planCost = this.isYearly ? this.planData.Pro.yearly : this.planData.Pro.monthly
           break
         default:
           break
@@ -58,15 +58,15 @@ export const useStore = defineStore('store', {
       this.addOnsCost = 0
 
       if (this.selectedAddOns.includes('Online service')) {
-        this.addOnsCost += this.isYearly ? 10 : 1
+        this.addOnsCost += this.isYearly ? this.addOnsData['Online service'].yearly : this.addOnsData['Online service'].monthly
       }
 
       if (this.selectedAddOns.includes('Larger storage')) {
-        this.addOnsCost += this.isYearly ? 20 : 2
+        this.addOnsCost += this.isYearly ? this.addOnsData['Larger storage'].yearly : this.addOnsData['Larger storage'].monthly
       }
 
       if (this.selectedAddOns.includes('Customisable profile')) {
-        this.addOnsCost += this.isYearly ? 20 : 2
+        this.addOnsCost += this.isYearly ? this.addOnsData['Customisable profile'].yearly : this.addOnsData['Customisable profile'].monthly
       }
 
       this.totalCost = this.planCost + this.addOnsCost

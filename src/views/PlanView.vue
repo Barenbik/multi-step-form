@@ -13,22 +13,22 @@
           <plan-component
             icon="icon-arcade"
             plan="Arcade"
-            :monthlyCost="9"
-            :yearlyCost="90"
+            :monthlyCost="planData.Arcade.monthly"
+            :yearlyCost="planData.Arcade.yearly"
             :isActive="selectedPlan === 'Arcade'"
           />
           <plan-component
             icon="icon-advanced"
             plan="Advanced"
-            :monthlyCost="12"
-            :yearlyCost="120"
+            :monthlyCost="planData.Advanced.monthly"
+            :yearlyCost="planData.Advanced.yearly"
             :isActive="selectedPlan === 'Advanced'"
           />
           <plan-component
             icon="icon-pro"
             plan="Pro"
-            :monthlyCost="15"
-            :yearlyCost="150"
+            :monthlyCost="planData.Pro.monthly"
+            :yearlyCost="planData.Pro.yearly"
             :isActive="selectedPlan === 'Pro'"
           />
         </div>
@@ -55,7 +55,7 @@ export default {
     StageComponent
   },
   computed: {
-    ...mapState(useStore, ['selectedPlan'])
+    ...mapState(useStore, ['selectedPlan', 'planData'])
   }
 }
 </script>
