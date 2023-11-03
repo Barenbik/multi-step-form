@@ -30,7 +30,7 @@
           </div>
         </div>
         <div class="flex justify-between px-6 pt-6 md:pb-10">
-          <p class="text-cool-gray">Total (per month)</p>
+          <p class="text-cool-gray">{{ 'Total (per ' + (this.isYearly ? 'year' : 'month') + ')' }}</p>
           <p class="text-purplish-blue font-bold">+${{ totalCost }}/{{ chargingPeriod }}</p>
         </div>
       </div>
