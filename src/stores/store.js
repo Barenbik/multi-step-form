@@ -5,7 +5,8 @@ export const useStore = defineStore('store', {
     isYearly: false,
     selectedPlan: '',
     planCost: 0,
-    totalCost: 0
+    totalCost: 0,
+    selectedAddOns: []
   }),
   actions: {
     toggleIsYearly() {
@@ -16,6 +17,19 @@ export const useStore = defineStore('store', {
       this.selectedPlan = plan
       this.updateCosts()
     },
+    updateSelectedAddOns(addOn) {
+      const index = this.selectedAddOns.indexOf(addOn);
+      
+      if (index !== -1) {        
+        this.selectedAddOns.splice(index, 1);
+      } else {        
+        this.selectedAddOns.push(addOn);
+      }
+
+      this.selectedAddOns = this.selectedAddOns.sort((a, b) => {
+        return b.localeCompare(a);
+      });
+    },    
     updateCosts() {
       switch (this.selectedPlan) {
         case 'Arcade':

@@ -2,6 +2,7 @@
   <div class="pb-2 md:pb-3">
     <div
       class="border-solid border border-gray-200 rounded-md flex hover:border-indigo-600 hover:bg-alabaster"
+      :class="this.isSelected ? 'border-indigo-600 bg-alabaster' : ''"
     >
       <div class="p-3 flex items-center w-full justify-stretch md:p-5">
         <input
@@ -9,6 +10,8 @@
           type="checkbox"
           name="addon"
           id="addon"
+          @input="updateSelectedAddOns(this.addon)"
+          v-model="checked"
         />
         <div class="pl-4 flex-grow md:pl-6">
           <p class="font-semibold text-marine-blue">{{ addon }}</p>
@@ -25,7 +28,7 @@
   </div>
 </template>
 <script>
-import { mapState } from 'pinia'
+import { mapState, mapActions } from 'pinia'
 import { useStore } from '@/stores/store.js'
 
 export default {
@@ -45,10 +48,20 @@ export default {
     yearlyCost: {
       type: String,
       required: true
+    },
+    isSelected: {
+      type: Boolean,
+      required: true
     }
   },
   computed: {
-    ...mapState(useStore, ['isYearly'])
+    ...mapState(useStore, ['isYearly']),
+    checked() {
+      return this.isSelected
+    }
+  },
+  methods: {
+    ...mapActions(useStore, ['updateSelectedAddOns'])
   }
 }
 </script>

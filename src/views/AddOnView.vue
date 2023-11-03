@@ -14,18 +14,21 @@
           description="Access to multiplayer games"
           monthlyCost="1"
           yearlyCost="10"
+          :isSelected="this.selectedAddOns.includes('Online service')"
         />
         <add-on-component
           addon="Larger storage"
           description="Extra 1TB of cloud save"
           monthlyCost="2"
           yearlyCost="20"
+          :isSelected="this.selectedAddOns.includes('Larger storage')"
         />
         <add-on-component
           addon="Customisable profile"
           description="Custom theme on your profile"
           monthlyCost="2"
           yearlyCost="20"
+          :isSelected="this.selectedAddOns.includes('Customisable profile')"
         />
       </div>
       <navigation-component backTo="/plans" moveTo="/finishingup" class="hidden md:block" />
@@ -37,12 +40,17 @@
 import AddOnComponent from '../components/AddOnComponent.vue'
 import NavigationComponent from '../components/NavigationComponent.vue'
 import StageComponent from '../components/StageComponent.vue'
+import { mapState } from 'pinia'
+import { useStore } from '@/stores/store.js'
 
 export default {
   components: {
     AddOnComponent,
     NavigationComponent,
     StageComponent
+  },
+  computed: {
+    ...mapState(useStore, ['selectedAddOns'])
   }
 }
 </script>
