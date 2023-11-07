@@ -8,16 +8,16 @@ export const useStore = defineStore('store', {
     addOnsCost: 0,
     totalCost: 0,
     selectedAddOns: [],
-    planData: {
+    plans: {
       Arcade: { monthly: 9, yearly: 90 },
       Advanced: { monthly: 12, yearly: 120 },
-      Pro: { monthly: 15, yearly: 150 },
+      Pro: { monthly: 15, yearly: 150 }
     },
-    addOnsData: {
+    addOns: {
       'Online service': { monthly: 1, yearly: 10 },
       'Larger storage': { monthly: 2, yearly: 20 },
-      'Customisable profile': { monthly: 2, yearly: 20 },
-    },
+      'Customisable profile': { monthly: 2, yearly: 20 }
+    }
   }),
   actions: {
     toggleIsYearly() {
@@ -37,19 +37,19 @@ export const useStore = defineStore('store', {
         this.selectedAddOns.push(addOn)
       }
 
-      this.selectedAddOns = this.selectedAddOns.sort((a, b) => b.localeCompare(a));
+      this.selectedAddOns = this.selectedAddOns.sort((a, b) => b.localeCompare(a))
       this.updateCosts()
     },
     updateCosts() {
       switch (this.selectedPlan) {
         case 'Arcade':
-          this.planCost = this.isYearly ? this.planData.Arcade.yearly : this.planData.Arcade.monthly
+          this.planCost = this.isYearly ? this.plans.Arcade.yearly : this.plans.Arcade.monthly
           break
         case 'Advanced':
-          this.planCost = this.isYearly ? this.planData.Advanced.yearly : this.planData.Advanced.monthly
+          this.planCost = this.isYearly ? this.plans.Advanced.yearly : this.plans.Advanced.monthly
           break
         case 'Pro':
-          this.planCost = this.isYearly ? this.planData.Pro.yearly : this.planData.Pro.monthly
+          this.planCost = this.isYearly ? this.plans.Pro.yearly : this.plans.Pro.monthly
           break
         default:
           break
@@ -58,18 +58,24 @@ export const useStore = defineStore('store', {
       this.addOnsCost = 0
 
       if (this.selectedAddOns.includes('Online service')) {
-        this.addOnsCost += this.isYearly ? this.addOnsData['Online service'].yearly : this.addOnsData['Online service'].monthly
+        this.addOnsCost += this.isYearly
+          ? this.addOns['Online service'].yearly
+          : this.addOns['Online service'].monthly
       }
 
       if (this.selectedAddOns.includes('Larger storage')) {
-        this.addOnsCost += this.isYearly ? this.addOnsData['Larger storage'].yearly : this.addOnsData['Larger storage'].monthly
+        this.addOnsCost += this.isYearly
+          ? this.addOns['Larger storage'].yearly
+          : this.addOns['Larger storage'].monthly
       }
 
       if (this.selectedAddOns.includes('Customisable profile')) {
-        this.addOnsCost += this.isYearly ? this.addOnsData['Customisable profile'].yearly : this.addOnsData['Customisable profile'].monthly
+        this.addOnsCost += this.isYearly
+          ? this.addOns['Customisable profile'].yearly
+          : this.addOns['Customisable profile'].monthly
       }
 
       this.totalCost = this.planCost + this.addOnsCost
     }
-  }, 
+  }
 })
