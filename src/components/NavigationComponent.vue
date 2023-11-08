@@ -5,11 +5,11 @@
       :class="{ 'justify-between': backTo, 'justify-end': !backTo }"
     >
       <router-link v-if="backTo" :to="backTo">
-        <button class="text-cool-gray font-semibold">Go Back</button>
+        <button class="text-cool-gray font-semibold hover:text-marine-blue">Go Back</button>
       </router-link>
       <router-link :to="moveTo">
         <button
-          class="text-white font-semibold py-3.5 rounded-lg w-[7.6rem]"
+          class="text-white font-semibold py-3.5 rounded-lg w-[7.6rem] hover:brightness-150"
           :class="moveTo === '/completed' ? 'bg-purplish-blue' : 'bg-marine-blue'"
         >
           {{ label }}

@@ -2,7 +2,7 @@
   <div class="pb-2 cursor-pointer">
     <div
       @click="updateSelectedPlan(this.plan)"
-      class="border-solid border border-gray-200 rounded-md flex hover:border-indigo-600 hover:bg-alabaster md:flex-col md:w-32 md:h-40"
+      class="border-solid border border-gray-200 rounded-md flex hover:border-indigo-600 hover:bg-alabaster md:flex-col md:w-[9.2rem] md:h-40"
       :class="isActive ? 'border-indigo-600 bg-alabaster' : ''"
     >
       <img
