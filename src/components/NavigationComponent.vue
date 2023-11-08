@@ -9,7 +9,7 @@
       </router-link>
       <router-link :to="moveTo">
         <button
-          class="text-white font-semibold py-3 px-8 rounded-lg md:w-36"
+          class="text-white font-semibold py-3.5 rounded-lg w-[7.6rem]"
           :class="moveTo === '/completed' ? 'bg-purplish-blue' : 'bg-marine-blue'"
         >
           {{ label }}
