@@ -1,16 +1,15 @@
 <template>
-  <div class="pb-2 md:pb-3">
+  <div class="pb-2 md:pb-3 cursor-pointer" @click="updateSelectedAddOns(this.addon)">
     <div
       class="border-solid border border-gray-200 rounded-md flex hover:border-indigo-600 hover:bg-alabaster"
       :class="this.isSelected ? 'border-indigo-600 bg-alabaster' : ''"
     >
       <div class="p-3 flex items-center w-full justify-stretch md:p-5">
         <input
-          class="h-5 w-5 text-purplish-blue rounded focus:outline-none focus:ring-transparent"
+          class="h-5 w-5 text-purplish-blue rounded focus:outline-none focus:ring-transparent cursor-pointer"
           type="checkbox"
           name="addon"
-          id="addon"
-          @input="updateSelectedAddOns(this.addon)"
+          id="addon"          
           v-model="checked"
         />
         <div class="pl-4 flex-grow md:pl-6">
