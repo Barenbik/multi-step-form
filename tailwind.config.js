@@ -23,7 +23,7 @@ module.exports = {
         custom: '38rem'
       },
       minWidth: {
-        94: '5.875rem'
+        98: '6.15rem'
       }
     }
   },

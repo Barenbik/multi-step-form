@@ -10,8 +10,8 @@
           >
         </div>
         <div class="hidden md:block">
-          <div class="text-light-gray text-xs min-w-94">STEP 1</div>
-          <div class="text-white text-sm font-semibold min-w-94">YOUR INFO</div>
+          <div class="text-light-gray text-xs min-w-98">STEP 1</div>
+          <div class="text-white text-sm font-semibold min-w-98">YOUR INFO</div>
         </div>
       </div>
       <div class="md:flex md:flex-row md:py-2 md:items-center">
@@ -21,8 +21,8 @@
           >
         </div>
         <div class="hidden md:block">
-          <div class="text-light-gray text-xs min-w-94">STEP 2</div>
-          <div class="text-white text-sm font-semibold min-w-94">SELECT PLAN</div>
+          <div class="text-light-gray text-xs min-w-98">STEP 2</div>
+          <div class="text-white text-sm font-semibold min-w-98">SELECT PLAN</div>
         </div>
       </div>
       <div class="md:flex md:flex-row md:py-2 md:items-center">
@@ -32,8 +32,8 @@
           >
         </div>
         <div class="hidden md:block">
-          <div class="text-light-gray text-xs min-w-94">STEP 3</div>
-          <div class="text-white text-sm font-semibold min-w-94">ADD-ONS</div>
+          <div class="text-light-gray text-xs min-w-98">STEP 3</div>
+          <div class="text-white text-sm font-semibold min-w-98">ADD-ONS</div>
         </div>
       </div>
       <div class="md:flex md:flex-row md:py-2 md:items-center">
@@ -43,8 +43,8 @@
           >
         </div>
         <div class="hidden md:block">
-          <div class="text-light-gray text-xs min-w-94">STEP 4</div>
-          <div class="text-white text-sm font-semibold min-w-94">SUMMARY</div>
+          <div class="text-light-gray text-xs min-w-98">STEP 4</div>
+          <div class="text-white text-sm font-semibold min-w-98">SUMMARY</div>
         </div>
       </div>
       <div>
