@@ -3,7 +3,7 @@ import { defineStore } from 'pinia'
 export const useStore = defineStore('store', {
   state: () => ({
     isYearly: false,
-    selectedPlan: '',
+    selectedPlan: 'Arcade',
     planCost: 0,
     addOnsCost: 0,
     totalCost: 0,
