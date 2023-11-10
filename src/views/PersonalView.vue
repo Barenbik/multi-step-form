@@ -1,5 +1,6 @@
 <template>
-  <vee-form :validation-schema="schema" @submit="handleSubmit">
+  <!-- <vee-form :validation-schema="schema" @submit="handleSubmit" class="flex flex-col h-screen justify-between"> -->
+  <vee-form :validation-schema="schema" @submit="handleSubmit" class="flex flex-col justify-between">
     <div
       class="mx-4 -my-20 p-6 rounded-md bg-white shadow-lg md:my-4 md:p-4 md:shadow-none md:flex md:flex-row md:h-custom md:min-h-custom"
     >
@@ -59,18 +60,20 @@
         </button>
       </div>
     </div>
-    <button
-      @click="validateForm"
-      type="submit"
-      class="text-white bg-marine-blue font-semibold py-3.5 rounded-lg w-[7.6rem] hover:brightness-150 mt-auto ml-auto md:mb-2 md:hidden"
-    >
-      Next Step
-    </button>
-    <!-- <navigation-component moveTo="/plans" class="md:hidden" /> -->
+    <div class="bg-white md:hidden">
+      <div class="flex items-center mx-4 py-5 md:mx-0 md:pb-2 justify-end">
+        <button
+          @click="validateForm"
+          type="submit"
+          class="text-white bg-marine-blue font-semibold py-3.5 rounded-lg w-[7.6rem] hover:brightness-150 mt-auto ml-auto md:mb-2"
+        >
+          Next Step
+        </button>
+      </div>
+    </div>
   </vee-form>
 </template>
 <script>
-// import NavigationComponent from '../components/NavigationComponentWithValidation.vue'
 import StageComponent from '../components/StageComponent.vue'
 
 export default {
