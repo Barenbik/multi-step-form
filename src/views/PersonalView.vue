@@ -1,6 +1,9 @@
 <template>
-  <!-- <vee-form :validation-schema="schema" @submit="handleSubmit" class="flex flex-col h-screen justify-between"> -->
-  <vee-form :validation-schema="schema" @submit="handleSubmit" class="flex flex-col justify-between">
+  <vee-form
+    :validation-schema="schema"
+    @submit="handleSubmit"
+    class="flex flex-col justify-between h-full"
+  >
     <div
       class="mx-4 -my-20 p-6 rounded-md bg-white shadow-lg md:my-4 md:p-4 md:shadow-none md:flex md:flex-row md:h-custom md:min-h-custom"
     >
