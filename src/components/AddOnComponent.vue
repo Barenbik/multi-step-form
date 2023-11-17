@@ -41,11 +41,11 @@ export default {
       required: true
     },
     monthlyCost: {
-      type: String,
+      type: Number,
       required: true
     },
     yearlyCost: {
-      type: String,
+      type: Number,
       required: true
     },
     isSelected: {
