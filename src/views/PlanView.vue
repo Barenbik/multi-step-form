@@ -12,7 +12,7 @@
         <div class="md:flex md:flex-row md:justify-between">
           <plan-component
             icon="icon-arcade"
-            iconPath="../src/assets/images/icon-arcade.svg"
+            iconPath="../assets/images/icon-arcade.svg"
             plan="Arcade"
             :monthlyCost="plans.Arcade.monthly"
             :yearlyCost="plans.Arcade.yearly"
