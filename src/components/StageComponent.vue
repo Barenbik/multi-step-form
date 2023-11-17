@@ -8,12 +8,12 @@
           class="flex items-center justify-center m-3 h-8 w-8 rounded-full border border-solid border-white"
           :class="this.$route.name === 'personal' ? 'bg-light-blue border-none' : ''"
         >
-          <router-link
-            to="/personal"
+          <div
             class="font-medium"
             :class="this.$route.name === 'personal' ? 'text-marine-blue' : 'text-white'"
-            >1</router-link
           >
+            1
+          </div>
         </div>
         <div class="hidden md:block">
           <div class="text-light-gray text-xs min-w-98">STEP 1</div>
@@ -25,12 +25,12 @@
           class="flex items-center justify-center m-3 h-8 w-8 rounded-full border border-solid border-white"
           :class="this.$route.name === 'plans' ? 'bg-light-blue border-none' : ''"
         >
-          <router-link
-            to="/plans"
+          <div
             class="font-medium"
             :class="this.$route.name === 'plans' ? 'text-marine-blue' : 'text-white'"
-            >2</router-link
           >
+            2
+          </div>
         </div>
         <div class="hidden md:block">
           <div class="text-light-gray text-xs min-w-98">STEP 2</div>
@@ -42,12 +42,12 @@
           class="flex items-center justify-center m-3 h-8 w-8 rounded-full border border-solid border-white"
           :class="this.$route.name === 'addons' ? 'bg-light-blue border-none' : ''"
         >
-          <router-link
-            to="/addons"
+          <div
             class="font-medium"
             :class="this.$route.name === 'addons' ? 'text-marine-blue' : 'text-white'"
-            >3</router-link
           >
+            3
+          </div>
         </div>
         <div class="hidden md:block">
           <div class="text-light-gray text-xs min-w-98">STEP 3</div>
@@ -59,12 +59,12 @@
           class="flex items-center justify-center m-3 h-8 w-8 rounded-full border border-solid border-white"
           :class="this.$route.name === 'finishingup' ? 'bg-light-blue border-none' : ''"
         >
-          <router-link
-            to="/finishingup"
+          <div
             class="font-medium"
             :class="this.$route.name === 'finishingup' ? 'text-marine-blue' : 'text-white'"
-            >4</router-link
           >
+            4
+          </div>
         </div>
         <div class="hidden md:block">
           <div class="text-light-gray text-xs min-w-98">STEP 4</div>
