@@ -10,24 +10,34 @@
           Double check everything looks OK before confirming.
         </p>
         <div class="bg-alabaster rounded-md">
-          <div class="flex justify-between px-6 pt-4 pb-2 items-center">
+          <div class="flex justify-between px-6 py-4 items-center">
             <div>
               <p class="font-semibold text-marine-blue">
                 {{ this.selectedPlan }} ({{ this.isYearly ? 'Yearly' : 'Monthly' }})
               </p>
-              <a class="text-cool-gray underline hover:cursor-pointer">Change</a>
+              <router-link to="/plans" class="text-cool-gray underline hover:cursor-pointer hover:text-purplish-blue hover:brightness-150">
+                Change
+              </router-link>
             </div>
             <p class="font-semibold text-marine-blue">
               ${{ this.planCost }}/ {{ this.isYearly ? 'yr' : 'mo' }}
             </p>
           </div>
-          <hr class="mx-6" />
-          <div class="px-6 pb-4 pt-2">
-            <div class="flex justify-between" v-for="addOn in this.selectedAddOns" :key="addOn.id">
-              <p class="pb-2 text-cool-gray">{{ addOn }}</p>
-              <p class="text-marine-blue">
-                +${{ isYearly ? addOns[addOn].yearly : addOns[addOn].monthly }}/{{ chargingPeriod }}
-              </p>
+          <div v-if="this.selectedAddOns.length > 0">
+            <hr class="mx-6" />
+            <div class="px-6 pb-4 pt-2">
+              <div
+                class="flex justify-between"
+                v-for="addOn in this.selectedAddOns"
+                :key="addOn.id"
+              >
+                <p class="pb-2 text-cool-gray">{{ addOn }}</p>
+                <p class="text-marine-blue">
+                  +${{ isYearly ? addOns[addOn].yearly : addOns[addOn].monthly }}/{{
+                    chargingPeriod
+                  }}
+                </p>
+              </div>
             </div>
           </div>
         </div>

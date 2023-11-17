@@ -16,7 +16,7 @@
         <div class="pb-5">
           <div class="flex justify-between">
             <label class="block text-marine-blue text-sm pb-1" for="name">Name</label>
-            <ErrorMessage class="text-red-600 text-sm pb-1" name="name" />
+            <ErrorMessage class="text-red-600 font-semibold text-sm pb-1" name="name" />
           </div>
           <vee-field
             class="border border-gray-300 py-2 px-4 rounded-md w-full"
@@ -29,7 +29,7 @@
         <div class="pb-5">
           <div class="flex justify-between">
             <label class="block text-marine-blue text-sm pb-1" for="email">Email Address</label>
-            <ErrorMessage class="text-red-600 text-sm pb-1" name="email" />
+            <ErrorMessage class="text-red-600 font-semibold text-sm pb-1" name="email" />
           </div>
           <vee-field
             class="border border-gray-300 py-2 px-4 rounded-md w-full"
@@ -42,7 +42,7 @@
         <div class="pb-5">
           <div class="flex justify-between">
             <label class="block text-marine-blue text-sm pb-1" for="phone">Phone Number</label>
-            <ErrorMessage class="text-red-600 text-sm pb-1" name="phone" />
+            <ErrorMessage class="text-red-600 font-semibold text-sm pb-1" name="phone" />
           </div>
           <vee-field
             class="border border-gray-300 py-2 px-4 rounded-md w-full"
