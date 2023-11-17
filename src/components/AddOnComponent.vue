@@ -9,7 +9,7 @@
           class="h-5 w-5 text-purplish-blue rounded focus:outline-none focus:ring-transparent cursor-pointer"
           type="checkbox"
           name="addon"
-          id="addon"          
+          id="addon"
           v-model="checked"
         />
         <div class="pl-4 flex-grow md:pl-6">

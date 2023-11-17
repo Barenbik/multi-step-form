@@ -15,7 +15,10 @@
               <p class="font-semibold text-marine-blue">
                 {{ this.selectedPlan }} ({{ this.isYearly ? 'Yearly' : 'Monthly' }})
               </p>
-              <router-link to="/plans" class="text-cool-gray underline hover:cursor-pointer hover:text-purplish-blue hover:brightness-150">
+              <router-link
+                to="/plans"
+                class="text-cool-gray underline hover:cursor-pointer hover:text-purplish-blue hover:brightness-150"
+              >
                 Change
               </router-link>
             </div>

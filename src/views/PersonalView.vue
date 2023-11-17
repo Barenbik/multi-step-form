@@ -90,10 +90,10 @@ export default {
   components: {
     StageComponent
   },
-  methods: {    
-    validateForm() {      
+  methods: {
+    validateForm() {
       this.$refs.form.validate().then((response) => {
-        if (response.valid) {            
+        if (response.valid) {
           this.$router.push('/plans')
         }
       })

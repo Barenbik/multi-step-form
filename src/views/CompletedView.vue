@@ -8,10 +8,10 @@
         <img src="../assets/images/icon-thank-you.svg" alt="Thank you" class="py-4 img-max" />
         <h1 class="font-semibold text-marine-blue text-3xl py-2 md:py-4">Thank you!</h1>
         <p class="text-center text-cool-gray md:pb-10">
-          Thanks for confirming your subscription! We hope you have fun using our platform.<br class="hidden md:block" />
-          If you ever need support, please feel<br
+          Thanks for confirming your subscription! We hope you have fun using our platform.<br
             class="hidden md:block"
           />
+          If you ever need support, please feel<br class="hidden md:block" />
           free to email us at support@loremgaming.com
         </p>
       </div>
