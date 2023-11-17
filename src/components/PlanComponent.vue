@@ -9,8 +9,8 @@
         class="p-3"
         width="60"
         height="60"
-        :src="`../src/assets/images/${icon}.svg`"
-        :alt="`${icon}`"
+        :src="iconPath"
+        :alt="icon"
       />
       <div class="p-4 pl-0 md:pl-4 md:mt-auto">
         <p class="font-semibold text-marine-blue">{{ plan }}</p>
@@ -28,6 +28,10 @@ import { useStore } from '@/stores/store.js'
 export default {
   props: {
     icon: {
+      type: String,
+      required: true
+    },
+    iconPath: {
       type: String,
       required: true
     },

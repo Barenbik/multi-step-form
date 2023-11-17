@@ -12,6 +12,7 @@
         <div class="md:flex md:flex-row md:justify-between">
           <plan-component
             icon="icon-arcade"
+            iconPath="../src/assets/images/icon-arcade.svg"
             plan="Arcade"
             :monthlyCost="plans.Arcade.monthly"
             :yearlyCost="plans.Arcade.yearly"
@@ -19,6 +20,7 @@
           />
           <plan-component
             icon="icon-advanced"
+            iconPath="../src/assets/images/icon-advanced.svg"
             plan="Advanced"
             :monthlyCost="plans.Advanced.monthly"
             :yearlyCost="plans.Advanced.yearly"
@@ -26,6 +28,7 @@
           />
           <plan-component
             icon="icon-pro"
+            iconPath="../src/assets/images/icon-pro.svg"
             plan="Pro"
             :monthlyCost="plans.Pro.monthly"
             :yearlyCost="plans.Pro.yearly"
