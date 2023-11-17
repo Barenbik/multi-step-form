@@ -5,7 +5,7 @@
     <stage-component class="rounded-md hidden md:block" />
     <div class="md:px-20 md:py-20">
       <div class="flex flex-col items-center py-10 px-8">
-        <img src="../assets/images/icon-thank-you.svg" alt="Thank you" class="py-4 img-max" />
+        <img src="/images/icon-thank-you.svg" alt="Thank you" class="py-4 img-max" />
         <h1 class="font-semibold text-marine-blue text-3xl py-2 md:py-4">Thank you!</h1>
         <p class="text-center text-cool-gray md:pb-10">
           Thanks for confirming your subscription! We hope you have fun using our platform.<br

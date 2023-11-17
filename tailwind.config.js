@@ -13,8 +13,8 @@ module.exports = {
         'pastel-blue': '#adbeff'
       },
       backgroundImage: {
-        'mobile-header-pattern': "url('../src/assets/images/bg-sidebar-mobile.svg')",
-        'desktop-header-pattern': "url('../src/assets/images/bg-sidebar-desktop.svg')"
+        'mobile-header-pattern': "url('/images/bg-sidebar-mobile.svg')",
+        'desktop-header-pattern': "url('/images/bg-sidebar-desktop.svg')"
       },
       minHeight: {
         custom: '38rem'
